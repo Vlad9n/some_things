@@ -571,7 +571,36 @@ void handler(int signal)
  */
 const char* lookup(const char* extension)
 {
-    // DO
+    if (strcasecmp(extension, "css") == 0)
+    {
+        return "text/css";
+    }
+    else if (strcasecmp(extension, "html") == 0)
+    {
+        return "text/html";
+    }
+    else if (strcasecmp(extension, "gif") == 0)
+    {
+        return "image/gif";
+    }
+    else if (strcasecmp(extension, "ico") == 0)
+    {
+        return "image/x-icon";
+    }
+    else if (strcasecmp(extension, "jpg") == 0)
+    {
+        return "image/jpeg";
+    }
+    else if (strcasecmp(extension, "js") == 0)
+    {
+        return "text/javascript";
+    }
+    else if (strcasecmp(extension, "png") == 0)
+    {
+        return "image/png";
+    }
+    
+    // return NULL otherwise
     return NULL;
 }
 
